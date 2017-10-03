@@ -1,0 +1,6 @@
+name: SKIDATA Datalake TDI
+description: |
+  Load and subscribe to data from TDI servers.
+version: 0.0.1-SNAPSHOT
+category: Enterprise Portal
+maintainer: Anders.Malmborg@skidata.com
