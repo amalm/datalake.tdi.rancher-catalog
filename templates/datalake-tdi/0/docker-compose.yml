@@ -6,5 +6,5 @@ services:
        ports:
            - "${PORT}:8080"
        environment:
-           TDI_CASSANDRA_CONTACT_POINTS: "172.27.80.144"
-           TDI_CASSANDRA_PORT: "9042"
+           TDI_CASSANDRA_CONTACT_POINTS: "${TDI_CASSANDRA_CONTACT_POINTS}"
+           TDI_CASSANDRA_PORT: "${TDI_CASSANDRA_PORT}"
