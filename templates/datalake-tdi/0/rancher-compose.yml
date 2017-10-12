@@ -5,18 +5,25 @@
   minimum_rancher_version: v1.6.6
   questions: 
 
-	- variable: SPRING_DATA_CASSANDRA_PORT
-	  description: "See https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-nosql.html"
-	  label: "spring.data.cassandra.port"
-	  type: "string"
+	- variable: TDI_CASSANDRA_PORT
+	  description: "The port Cassandra CQL port, normally 9042"
+	  label: "tdi.cassandra.port"
+	  type: "int"
 	  required: true
 	  default: "9042"
 
-	- variable: SPRING_DATA_CASSANDRA_CONTACT_POINTS
-	  description: "See https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-nosql.html"
-	  label: "spring.data.cassandra.contact-points"
+	- variable: TDI_CASSANDRA_CONTACT_POINTS
+	  description: "Comma separated list of host names or IPs where Cassandra is running"
+	  label: "tdi.cassandra.contact-points"
 	  type: "string"
 	  required: true
+	  
+	- variable: PORT
+	  description: "Exposed port"
+	  label: "port"
+	  type: "int"
+	  required: true
+	  default: "8088"
 
 datalake-tdi:
   scale: 1
