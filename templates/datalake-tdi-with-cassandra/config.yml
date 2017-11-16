@@ -1,0 +1,6 @@
+name: SKIDATA Datalake TDI w/ Cassandra 3
+description: |
+  Load and subscribe to data from TDI servers. To be used for test and demo.
+version: 0.0.1-SNAPSHOT
+category: Enterprise Portal
+maintainer: Anders.Malmborg@skidata.com

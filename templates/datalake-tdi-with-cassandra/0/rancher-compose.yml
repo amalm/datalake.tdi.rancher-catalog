@@ -1,0 +1,26 @@
+.catalog:
+  name: "SKIDATA Datalake TDI w/ Cassandra"
+  version: "0.0.1-SNAPSHOT"
+  description: "Load and subscribe to data from TDI servers. Bundle w/ Cassandra, use for test and demos."
+  minimum_rancher_version: v1.6.6
+  questions: 
+
+   - variable: TDI_CASSANDRA_PORT
+     description: "The port Cassandra CQL port, normally 9042 so in this case to avoid collisions use 90422"
+     label: "tdi.cassandra.port"
+     type: "int"
+     required: true
+     default: "90422"
+
+   - variable: PORT
+     description: "Exposed port"
+     label: "port"
+     type: "int"
+     required: true
+     default: "8088"
+
+cassandra:
+  scale: 1
+datalake-tdi:
+  scale: 1
+     
