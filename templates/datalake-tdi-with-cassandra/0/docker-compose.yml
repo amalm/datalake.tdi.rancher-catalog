@@ -4,6 +4,8 @@ services:
        image: cassandra:3
        ports:
           - "${TDI_CASSANDRA_PORT}:9042"
+       environment:
+           TDI_CASSANDRA_PORT: "${TDI_CASSANDRA_PORT}"
        
    datalake-tdi:
        image: docker.skidata.net/datalake.tdi:0.0.1-SNAPSHOT
