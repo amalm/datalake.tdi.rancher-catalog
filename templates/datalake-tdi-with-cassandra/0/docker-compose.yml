@@ -3,7 +3,7 @@ services:
    cassandra:
        image: cassandra:3
        ports:
-          - "90422:9042"
+          - "9045:9042"
        
    datalake-tdi:
        image: docker.skidata.net/datalake.tdi:0.0.1-SNAPSHOT
