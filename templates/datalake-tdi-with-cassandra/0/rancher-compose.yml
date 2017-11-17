@@ -10,7 +10,7 @@
      label: "tdi.cassandra.port"
      type: "int"
      required: true
-     default: "90422"
+     default: "9045"
 
    - variable: PORT
      description: "Exposed port"
