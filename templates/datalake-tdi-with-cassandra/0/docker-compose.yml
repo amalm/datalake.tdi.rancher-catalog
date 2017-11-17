@@ -9,7 +9,7 @@ services:
        image: docker.skidata.net/datalake.tdi:0.0.1-SNAPSHOT
        depends_on: 
           - cassandra
-   	   links: 
+       links: 
           - cassandra
        mem_limit: 1024m
        ports:
