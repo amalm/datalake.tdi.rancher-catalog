@@ -11,6 +11,20 @@
      type: "int"
      required: true
      default: "8082"
+     
+   - variable: CASSANDRA_MAX_HEAP_SIZE
+     description: "Limit the heap space as Cassandra uses quite a lot of memory(min 8GB) based on calculation, see https://docs.datastax.com/en/cassandra/3.0/cassandra/operations/opsTuneJVM.html#opsTuneJVM__tuning-the-java-heap"
+     label: "Cassandra max heap space"
+     type: "string"
+     rewuired: true
+     default: "2G"  
+
+   - variable: CASSANDRA_HEAP_NEWSIZE
+     description: "Limit the heap space chunks allocated by Cassandra"
+     label: "Cassandra heap new size"
+     type: "string"
+     rewuired: true
+     default: "256M"  
 
 cassandra:
   scale: 1
