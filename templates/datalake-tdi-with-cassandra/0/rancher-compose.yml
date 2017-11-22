@@ -10,7 +10,7 @@
      label: "port"
      type: "int"
      required: true
-     default: "0"
+     default: "8082"
 
 cassandra:
   scale: 1
