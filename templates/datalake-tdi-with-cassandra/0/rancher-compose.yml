@@ -5,19 +5,12 @@
   minimum_rancher_version: v1.6.6
   questions: 
 
-   - variable: TDI_CASSANDRA_PORT
-     description: "The port Cassandra CQL port, normally 9042 so in this case to avoid collisions use 90422"
-     label: "tdi.cassandra.port"
-     type: "int"
-     required: true
-     default: "9045"
-
    - variable: PORT
      description: "Exposed port"
      label: "port"
      type: "int"
      required: true
-     default: "8088"
+     default: "0"
 
 cassandra:
   scale: 1

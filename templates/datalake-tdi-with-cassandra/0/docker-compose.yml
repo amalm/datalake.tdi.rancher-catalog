@@ -2,19 +2,14 @@ version: "2"
 services:
    cassandra:
        image: cassandra:3
-       mem_limit: 1024m
-       ports:
-          - "9045:9042"
        
    datalake-tdi:
        image: docker.skidata.net/datalake.tdi:0.0.1-SNAPSHOT
-       depends_on: 
-          - cassandra
        links: 
-          - cassandra
+          - cassandra:db
        mem_limit: 1024m
        ports:
-           - "${PORT}:8080"
+           - "0:8080"
        environment:
-           TDI_CASSANDRA_CONTACT_POINTS: cassandra
-           TDI_CASSANDRA_PORT: "${TDI_CASSANDRA_PORT}"
+           TDI_CASSANDRA_CONTACT_POINTS: db
+           TDI_CASSANDRA_PORT: 9042
