@@ -6,8 +6,8 @@
   questions: 
 
    - variable: PORT
-     description: "Exposed port"
-     label: "port"
+     description: "Exposed port for the Datalake rest services. The container port is 8080."
+     label: "Exposed port"
      type: "int"
      required: true
      default: "8082"
